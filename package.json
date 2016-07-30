@@ -1,0 +1,10 @@
+{
+  "name": "ng-mod-lazy",
+  "version": "0.0.1",
+  "main":"server.js",
+  "author":"Marx JMoura",
+  "description": "Modular AngularJS app design with lazy loading",
+  "dependencies": {
+    "mime-types": "latest"
+  }
+}
