@@ -6,15 +6,16 @@ var fs = require('fs'),
 var server = http.createServer(function (request, response) {
   var filePath = getFilePath(request);
 
-  fs.readFile(filePath, function(err, html) {
+  fs.readFile(filePath, function(err, fileContent) {
     if(err) {
-      handleError(request, response, err);
+      errorResponse(response, err);
       return;
     }
 
-    response.writeHeader(200, { 'Content-Type': mime.lookup(filePath) });
-    response.write(html);
-    response.end();
+    successResponse(response, {
+      type: mime.lookup(filePath),
+      content: fileContent
+    });
   });
 });
 
@@ -24,11 +25,17 @@ function getFilePath(request) {
   return request.url.substr(1).replace(/\?v=\d+/, '');
 }
 
-function handleError(request, response, err) {
+function errorResponse(response, err) {
   var httpStatusCode = err.code === 'ENOENT' ? 404 : 500;
 
   response.writeHeader(httpStatusCode, { 'Content-Type': 'text/plain' });
   response.write(err.message);
+  response.end();
+}
+
+function successResponse(response, file) {
+  response.writeHeader(200, { 'Content-Type': file.type });
+  response.write(file.content);
   response.end();
 }
 
