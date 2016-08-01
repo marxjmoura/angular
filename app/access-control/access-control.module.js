@@ -1,5 +1,5 @@
 (function() {
 
-  var module = angular.module('main.accessControl', []);
+  var module = angular.module('accessControl', []);
 
 })();

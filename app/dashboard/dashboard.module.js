@@ -1,6 +1,6 @@
 (function() {
 
-  var module = angular.module('main.dashboard', []);
+  var module = angular.module('dashboard', []);
 
   module.config(routes);
 

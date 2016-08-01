@@ -1,6 +1,6 @@
 (function() {
 
-  angular.module('main.dashboard').service('welcome', Welcome);
+  angular.module('dashboard').service('welcome', Welcome);
 
   function Welcome ()  {
     var _self = this;

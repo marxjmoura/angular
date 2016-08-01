@@ -1,6 +1,6 @@
 (function() {
 
-  angular.module('main.dashboard').controller('homeCtrl', HomeCtrl);
+  angular.module('dashboard').controller('homeCtrl', HomeCtrl);
 
   HomeCtrl.$inject = ['welcome'];
 
