@@ -3,10 +3,8 @@
   var module = angular.module('dashboard', []);
 
   module.config(routes);
-  module.run(refresh);
 
   routes.$inject = ['$routeProvider'];
-  refresh.$inject = ['$route'];
 
   function routes($routeProvider) {
     $routeProvider
@@ -21,10 +19,6 @@
           ]);
         }]
       });
-  }
-
-  function refresh($route) {
-    $route.reload();
   }
 
 })();

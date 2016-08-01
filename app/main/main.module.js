@@ -7,7 +7,7 @@
   module.run(modules);
 
   location.$inject = ['$locationProvider'];
-  modules.$inject = ['$ocLazyLoad'];
+  modules.$inject = ['$ocLazyLoad', '$route'];
 
   function location($locationProvider) {
     $locationProvider.html5Mode({
@@ -22,11 +22,13 @@
     };
   }
 
-  function modules($ocLazyLoad) {
+  function modules($ocLazyLoad, $route) {
     $ocLazyLoad.load([
       'app/access-control/access-control.module.js'.newVersion(),
       'app/dashboard/dashboard.module.js'.newVersion()
-    ]);
+    ]).then(function() {
+      $route.reload();
+    });
   }
 
 })();
