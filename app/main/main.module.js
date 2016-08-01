@@ -3,10 +3,12 @@
   var module = angular.module('main', ['ngRoute', 'oc.lazyLoad']);
 
   module.config(location);
+  module.config(router);
   module.config(stringVersion);
   module.run(modules);
 
   location.$inject = ['$locationProvider'];
+  router.$inject = ['$routeProvider'];
   modules.$inject = ['$ocLazyLoad', '$route'];
 
   function location($locationProvider) {
@@ -14,6 +16,10 @@
       enabled: true,
       requireBase: false
     });
+  }
+
+  function router($routeProvider) {
+    $routeProvider.caseInsensitiveMatch = true;
   }
 
   function stringVersion() {
