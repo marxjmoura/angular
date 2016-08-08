@@ -1,4 +1,4 @@
-# ng-mod-lazy
+# AngularJS APP
 Modular AngularJS app design with lazy loading.
 
 ## How to run
