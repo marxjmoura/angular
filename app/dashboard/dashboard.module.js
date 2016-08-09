@@ -8,7 +8,7 @@
 
   function routes($routeProvider) {
     $routeProvider
-      .when('/home', {
+      .when('/', {
         templateUrl: 'app/dashboard/views/home.html'.newVersion(),
         controller: 'homeCtrl',
         controllerAs: 'home',

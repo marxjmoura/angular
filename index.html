@@ -8,7 +8,19 @@
   <link rel="stylesheet" href="/assets/stylesheets/ng-animation.css?v=0.0.1">
 </head>
 <body>
-  <a href="/home">home</a>
+  <md-content>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>
+          <span data-ng-bind="'Hi!'"></span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-fab md-mini" aria-label="Add">
+          <md-icon md-font-icon="fa fa-plus"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+  </md-content>
   <div class="fader" data-ng-view></div>
   <script type="text/javascript" src="lib/jquery.min.js?v=3.1.0"></script>
   <script type="text/javascript" src="lib/angular.min.js?v=1.5.7"></script>
