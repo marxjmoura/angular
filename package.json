@@ -5,7 +5,9 @@
   "author":"Marx JMoura",
   "description": "Modular AngularJS app design with lazy loading",
   "dependencies": {
-    "mime-types": "latest",
+    "mime-types": "latest"
+  },
+  "devDependencies": {
     "jasmine": "latest"
   }
 }
