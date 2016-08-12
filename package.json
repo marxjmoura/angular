@@ -1,11 +1,19 @@
 {
   "name": "ng-mod-lazy",
   "version": "0.0.1",
-  "main":"server.js",
-  "author":"Marx JMoura",
+  "main": "server.js",
+  "author": "Marx JMoura",
   "description": "Modular AngularJS app design with lazy loading",
   "dependencies": {
-    "mime-types": "latest",
-    "jasmine": "latest"
+    "mime-types": "^2.1.11"
+  },
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.2.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1"
   }
 }
