@@ -23,8 +23,8 @@
 
   function modules($ocLazyLoad, $route) {
     $ocLazyLoad.load([
-      'app/access-control/access-control.module.js',
-      'app/dashboard/dashboard.module.js'
+      '/modules/access-control/access-control.module.js',
+      '/modules/dashboard/dashboard.module.js'
     ]).then(function() {
       $route.reload();
     });

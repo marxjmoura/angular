@@ -21,8 +21,8 @@ var server = http.createServer(function (request, response) {
 
 function getFilePath(request) {
   var isFileRequest = /^.*\.[\w]+(\?v=.+)?$/.test(request.url);
-  if (!isFileRequest) return 'index.html';
-  return request.url.substr(1).replace(/\?v=.+/, '');
+  if (!isFileRequest) return 'app/index.html';
+  return 'app/' + request.url.substr(1).replace(/\?v=.+/, '');
 }
 
 function errorResponse(response, err) {
