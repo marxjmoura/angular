@@ -5,8 +5,10 @@ module.exports = function(config) {
     browsers: ['PhantomJS'],
     singleRun: true,
     files: [
-      'node_modules/angular/angular.js',
-      'node_modules/angular-mocks/angular-mocks.js',
+      'lib/jquery.min.js',
+      'lib/angular.min.js',
+      'lib/angular-route.min.js',
+      'lib/angular-mocks.js',
       'app/access-control/*.js',
       'app/dashboard/*.js',
       'app/main/*.js',

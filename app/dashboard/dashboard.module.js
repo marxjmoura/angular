@@ -1,6 +1,6 @@
 (function() {
 
-  var module = angular.module('dashboard', []);
+  var module = angular.module('dashboard', ['ngRoute']);
 
   module.config(routes);
 
@@ -10,7 +10,7 @@
     $routeProvider
       .when('/', {
         templateUrl: 'app/dashboard/views/home.html'.newVersion(),
-        controller: 'homeCtrl',
+        controller: 'HomeCtrl',
         controllerAs: 'home',
         resolve: ['$ocLazyLoad', function($ocLazyLoad) {
           return $ocLazyLoad.load([

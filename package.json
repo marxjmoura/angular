@@ -8,8 +8,6 @@
     "mime-types": "latest"
   },
   "devDependencies": {
-    "angular": "^1.5.8",
-    "angular-mocks": "^1.5.8",
     "grunt": "^1.0.1",
     "grunt-jasmine-node": "^0.3.1",
     "grunt-karma-0.9.1": "^0.4.3",
