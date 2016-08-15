@@ -1,6 +1,10 @@
 (function() {
 
-  var module = angular.module('main', ['ngRoute', 'ngMaterial', 'oc.lazyLoad']);
+  var module = angular.module('main', [
+    'ngMaterial',
+    'ngRoute',
+    'oc.lazyLoad'
+  ]);
 
   module.config(location);
   module.config(router);
