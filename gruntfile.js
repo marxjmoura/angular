@@ -1,16 +1,14 @@
 grunt.initConfig({
-  jasmine_node: {
-    options: {
-      forceExit: true,
-      match: '.',
-      matchall: false,
-      extensions: 'js',
-      specNameMatcher: 'spec'
-    },
-    all: ['spec/']
+  karma: {
+    unit: {
+      configFile: 'karma.conf.js'
+    }
   }
 });
 
-grunt.loadNpmTasks('grunt-jasmine-node');
+grunt.loadNpmTasks('grunt-karma');
 
-grunt.registerTask('default', 'jasmine_node');
+grunt.registerTask('test', [
+  'jshint',
+  'karma'
+]);
