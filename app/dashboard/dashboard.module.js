@@ -9,13 +9,13 @@
   function routes($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/dashboard/views/home.html'.newVersion(),
+        templateUrl: 'app/dashboard/views/home.html',
         controller: 'HomeCtrl',
         controllerAs: 'home',
         resolve: ['$ocLazyLoad', function($ocLazyLoad) {
           return $ocLazyLoad.load([
-            '/app/dashboard/controllers/home.controller.js'.newVersion(),
-            '/app/dashboard/services/welcome.service.js'.newVersion()
+            '/app/dashboard/controllers/home.controller.js',
+            '/app/dashboard/services/welcome.service.js'
           ]);
         }]
       });

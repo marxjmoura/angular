@@ -34,7 +34,10 @@ function errorResponse(response, err) {
 }
 
 function successResponse(response, file) {
-  response.writeHeader(200, { 'Content-Type': file.type });
+  response.writeHeader(200, {
+    'Content-Type': file.type,
+    'Cache-Control': 'no-cache'
+  });
   response.write(file.content);
   response.end();
 }
