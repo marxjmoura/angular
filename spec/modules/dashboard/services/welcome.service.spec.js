@@ -2,6 +2,7 @@ describe('dashboard module', function() {
   var welcomeService;
 
   beforeEach(module('dashboard'));
+  
   beforeEach(inject(function($injector) {
     welcomeService = $injector.get('welcome');
   }));
