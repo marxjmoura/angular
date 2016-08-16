@@ -1,4 +1,4 @@
-# AngularJS APP
+# AngularJS Application
 Modular AngularJS app design with lazy loading.
 
 ## How to run
