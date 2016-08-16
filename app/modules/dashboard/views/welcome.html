@@ -1,0 +1,20 @@
+<div ng-controller="WelcomeCtrl as welcome" layout="row" flex layout-align="center center">
+  <div layout="column" layout-align="center">
+    <h1>
+      Welcome to Guestlist
+      <br/>
+      <small>
+        Please introduce yourself
+      </small>
+    </h1>
+
+    <md-input-container>
+      <label>What your name?</label>
+      <input ng-model="user.name" maxlength="20">
+    </md-input-container>
+
+    <md-button class="md-raised md-primary">
+      Go to my list
+    </md-button>
+  </div>
+</div>

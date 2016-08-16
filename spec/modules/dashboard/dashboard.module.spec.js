@@ -6,9 +6,7 @@ describe('dashboard module', function() {
     $route = $injector.get('$route');
   }));
 
-  it('should map home route', function() {
-    expect($route.routes['/'].controller).toBe('HomeCtrl');
-    expect($route.routes['/'].controllerAs).toBe('home');
-    expect($route.routes['/'].templateUrl).toEqual('/modules/dashboard/views/home.html');
+  it('should map routes', function() {
+    expect($route.routes['/'].templateUrl).toEqual('/modules/dashboard/views/welcome.html');
   });
 });

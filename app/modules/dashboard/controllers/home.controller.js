@@ -2,14 +2,10 @@
 
   angular.module('dashboard').controller('HomeCtrl', HomeCtrl);
 
-  HomeCtrl.$inject = ['welcome'];
+  HomeCtrl.$inject = [];
 
-  function HomeCtrl (welcome)  {
-    var _self = this;
+  function HomeCtrl ()  {
 
-    _self.getMessage = function() {
-      return welcome.getMessage('Marx');
-    }
   }
 
 })();
