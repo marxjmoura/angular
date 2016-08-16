@@ -3,6 +3,7 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['jasmine'],
     browsers: ['PhantomJS'],
+    reporters: ["dots"],
     singleRun: true,
     files: [
       'app/lib/jquery.min.js',
