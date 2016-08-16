@@ -15,7 +15,7 @@
     '$routeProvider',
     router
   ]);
-  
+
   module.run([
     '$ocLazyLoad',
     '$route',
