@@ -19,9 +19,7 @@
             '/modules/dashboard/services/welcome.service.js'
           ]);
         }]
-      });
-
-    $routeProvider
+      })
       .when('/guest-list', {
         templateUrl: '/modules/dashboard/views/guest-list.html',
         resolve: ['$ocLazyLoad', function($ocLazyLoad) {
