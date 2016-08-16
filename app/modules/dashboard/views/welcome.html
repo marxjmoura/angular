@@ -1,7 +1,7 @@
 <div ng-controller="WelcomeCtrl as welcome" layout="row" flex layout-align="center center">
-  <div layout="column" layout-align="center">
+  <form name="userForm" layout="column" layout-align="center" ng-submit="welcome.newUser()">
     <h1>
-      Welcome to Guestlist
+      Welcome to your guest list
       <br/>
       <small>
         Please introduce yourself
@@ -10,11 +10,11 @@
 
     <md-input-container>
       <label>What your name?</label>
-      <input ng-model="user.name" maxlength="20">
+      <input ng-model="welcome.user.name" maxlength="20" required />
     </md-input-container>
 
-    <md-button class="md-raised md-primary">
+    <md-button type="submit" class="md-raised md-primary" ng-disabled="userForm.$invalid">
       Go to my list
     </md-button>
-  </div>
+  </form>
 </div>

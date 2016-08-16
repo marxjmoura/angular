@@ -1,15 +1,21 @@
 (function() {
 
-  angular.module('dashboard').controller('WelcomeCtrl', WelcomeCtrl);
+  angular.module('dashboard').controller('WelcomeCtrl', [
+    '$location',
+    'welcome',
+    WelcomeCtrl
+  ]);
 
-  WelcomeCtrl.$inject = ['welcome'];
-
-  function WelcomeCtrl (welcome)  {
+  function WelcomeCtrl ($location, welcome)  {
     var _self = this;
 
     _self.getMessage = function() {
       return welcome.getMessage('Marx');
     }
+
+    _self.newUser = function() {
+      $location.path('/guest-list');
+    };
   }
 
 })();

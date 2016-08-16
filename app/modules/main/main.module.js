@@ -6,13 +6,21 @@
     'oc.lazyLoad'
   ]);
 
-  module.config(location);
-  module.config(router);
-  module.run(modules);
+  module.config([
+    '$locationProvider',
+    location
+  ]);
 
-  location.$inject = ['$locationProvider'];
-  router.$inject = ['$routeProvider'];
-  modules.$inject = ['$ocLazyLoad', '$route'];
+  module.config([
+    '$routeProvider',
+    router
+  ]);
+  
+  module.run([
+    '$ocLazyLoad',
+    '$route',
+    modules
+  ]);
 
   function location($locationProvider) {
     $locationProvider.html5Mode({

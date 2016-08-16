@@ -1,10 +1,13 @@
 (function() {
 
-  var module = angular.module('dashboard', ['ngRoute']);
+  var module = angular.module('dashboard', [
+    'ngRoute'
+  ]);
 
-  module.config(routes);
-
-  routes.$inject = ['$routeProvider'];
+  module.config([
+    '$routeProvider',
+    routes
+  ]);
 
   function routes($routeProvider) {
     $routeProvider
@@ -14,6 +17,16 @@
           return $ocLazyLoad.load([
             '/modules/dashboard/controllers/welcome.controller.js',
             '/modules/dashboard/services/welcome.service.js'
+          ]);
+        }]
+      });
+
+    $routeProvider
+      .when('/guest-list', {
+        templateUrl: '/modules/dashboard/views/guest-list.html',
+        resolve: ['$ocLazyLoad', function($ocLazyLoad) {
+          return $ocLazyLoad.load([
+            '/modules/dashboard/controllers/guest-list.controller.js'
           ]);
         }]
       });
