@@ -4,30 +4,19 @@
     'ngRoute'
   ]);
 
-  module.config([
-    '$routeProvider',
-    routes
+  module.run([
+    '$ocLazyLoad',
+    '$route',
+    init
   ]);
 
-  function routes($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: '/modules/dashboard/views/welcome.html',
-        resolve: ['$ocLazyLoad', function($ocLazyLoad) {
-          return $ocLazyLoad.load([
-            '/modules/dashboard/controllers/welcome.controller.js',
-            '/modules/dashboard/services/welcome.service.js'
-          ]);
-        }]
-      })
-      .when('/guest-list', {
-        templateUrl: '/modules/dashboard/views/guest-list.html',
-        resolve: ['$ocLazyLoad', function($ocLazyLoad) {
-          return $ocLazyLoad.load([
-            '/modules/dashboard/controllers/guest-list.controller.js'
-          ]);
-        }]
-      });
+  function init($ocLazyLoad, $route) {
+    $ocLazyLoad.load([
+      '/modules/dashboard/routes/guest-list.route.js',
+      '/modules/dashboard/routes/welcome.route.js'
+    ]).then(function() {
+      $route.reload();
+    });
   }
 
 })();

@@ -6,10 +6,10 @@
 
   module.run([
     '$ocLazyLoad',
-    defaults
+    init
   ]);
 
-  function defaults($ocLazyLoad, $route) {
+  function init($ocLazyLoad, $route) {
     $ocLazyLoad.load([
       '/modules/access-control/services/user.service.js'
     ]);
