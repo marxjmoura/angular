@@ -2,9 +2,9 @@ describe('dashboard module', function() {
   var welcomeService;
 
   beforeEach(module('dashboard'));
-  
+
   beforeEach(inject(function($injector) {
-    welcomeService = $injector.get('welcome');
+    welcomeService = $injector.get('dashboard.Welcome');
   }));
 
   it('should include name in welcome message when it is supplied', function() {

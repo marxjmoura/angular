@@ -9,6 +9,7 @@ module.exports = function(config) {
       'app/lib/jquery.min.js',
       'app/lib/angular.min.js',
       'app/lib/angular-route.min.js',
+      'app/lib/oc-lazyload.min.js',
       'app/modules/access-control/*.js',
       'app/modules/dashboard/*.js',
       'app/modules/main/*.js',

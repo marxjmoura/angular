@@ -1,19 +1,22 @@
 (function() {
 
-  angular.module('dashboard').controller('WelcomeCtrl', [
+  angular.module('dashboard').controller('dashboard.WelcomeCtrl', [
     '$location',
-    'welcome',
+    'accessControl.User',
     WelcomeCtrl
   ]);
 
-  function WelcomeCtrl ($location, welcome)  {
+  function WelcomeCtrl ($location, user)  {
     var _self = this;
 
-    _self.getMessage = function() {
-      return welcome.getMessage('Marx');
+    _self.init = function() {
+      if (user.current()) {
+        $location.path('/guest-list');
+      }
     }
 
-    _self.newUser = function() {
+    _self.createUser = function() {
+      user.save(_self.user);
       $location.path('/guest-list');
     };
   }

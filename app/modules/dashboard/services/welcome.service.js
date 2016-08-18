@@ -1,6 +1,6 @@
 (function() {
 
-  angular.module('dashboard').service('welcome', [
+  angular.module('dashboard').service('dashboard.Welcome', [
     Welcome
   ]);
 

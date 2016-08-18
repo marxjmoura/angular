@@ -19,7 +19,7 @@
   module.run([
     '$ocLazyLoad',
     '$route',
-    modules
+    defaults
   ]);
 
   function location($locationProvider) {
@@ -33,7 +33,7 @@
     $routeProvider.caseInsensitiveMatch = true;
   }
 
-  function modules($ocLazyLoad, $route) {
+  function defaults($ocLazyLoad, $route) {
     $ocLazyLoad.load([
       '/modules/access-control/access-control.module.js',
       '/modules/dashboard/dashboard.module.js'
