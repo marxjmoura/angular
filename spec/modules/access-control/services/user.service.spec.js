@@ -9,17 +9,15 @@ describe('accessControl.User', function() {
 
   describe('save()', function() {
     it('should save user in local storage', function() {
-      var user = { name: 'New user name' };
-      userService.save(user);
-      expect(localStorage.getItem('user')).toEqual(JSON.stringify(user));
+      userService.save(factory.newUser());
+      expect(localStorage.getItem('user')).toEqual(JSON.stringify(factory.newUser()));
     });
   });
 
   describe('current()', function() {
     it('should return user saved in local storage', function() {
-      var user = { name: 'New user name' };
-      localStorage.setItem('user', JSON.stringify(user));
-      expect(userService.current()).toEqual(user);
+      localStorage.setItem('user', JSON.stringify(factory.newUser()));
+      expect(userService.current()).toEqual(factory.newUser());
     });
   });
 });
