@@ -1,11 +1,5 @@
 describe('accessControl.User', function() {
-  beforeEach(function() {
-    module('accessControl');
-
-    module(function($provide) {
-      $provide.value('$ocLazyLoad', { load: angular.noop });
-    });
-  });
+  beforeEach(module('accessControl'));
 
   describe('save()', function() {
     var userService;

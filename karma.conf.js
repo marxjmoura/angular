@@ -16,6 +16,9 @@ module.exports = function(config) {
       'app/modules/**/*.js',
       'spec/lib/angular-mocks.js',
       'spec/**/*.spec.js'
-    ]
+    ],
+    proxies: {
+      '/modules/': '/base/app/modules/'
+    }
   })
 }

@@ -1,7 +1,8 @@
 (function() {
 
   var module = angular.module('dashboard', [
-    'ngRoute'
+    'ngRoute',
+    'oc.lazyLoad'
   ]);
 
   module.run([
