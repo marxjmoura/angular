@@ -7,7 +7,7 @@ describe('guest-list.route', function() {
     $route = $injector.get('$route');
   }));
 
-  describe('/', function() {
+  describe('/guest-list', function() {
     it("should map to guest list page", function() {
       expect($route.routes['/guest-list'].templateUrl).toEqual('/modules/dashboard/views/guest-list.html');
       expect($route.routes['/guest-list'].controller).toEqual('dashboard.GuestListCtrl');
