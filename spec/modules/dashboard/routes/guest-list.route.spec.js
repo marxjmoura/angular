@@ -1,4 +1,4 @@
-describe('guest-list.route', function() {
+describe('dashboard.guestListRoute', function() {
   var $route;
 
   beforeEach(module('dashboard'));

@@ -1,4 +1,4 @@
-describe('welcome.route', function() {
+describe('dashboard.welcomeRoute', function() {
   var $route;
 
   beforeEach(module('dashboard'));

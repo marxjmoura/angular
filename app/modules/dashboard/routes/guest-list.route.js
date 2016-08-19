@@ -4,10 +4,10 @@
 
   module.config([
     '$routeProvider',
-    routes
+    guestListRoute
   ]);
 
-  function routes($routeProvider) {
+  function guestListRoute($routeProvider) {
     $routeProvider
       .when('/guest-list', {
         templateUrl: '/modules/dashboard/views/guest-list.html',

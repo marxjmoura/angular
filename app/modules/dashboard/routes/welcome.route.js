@@ -4,10 +4,10 @@
 
   module.config([
     '$routeProvider',
-    routes
+    welcomeRoute
   ]);
 
-  function routes($routeProvider) {
+  function welcomeRoute($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: '/modules/dashboard/views/welcome.html',
