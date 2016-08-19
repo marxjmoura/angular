@@ -1,6 +1,6 @@
 (function (factory) {
 
-  factory.newUser = function() {
+  factory.user = function() {
     return {
       name: "New user name"
     };
