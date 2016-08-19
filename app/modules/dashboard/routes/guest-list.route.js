@@ -11,7 +11,7 @@
     $routeProvider
       .when('/guest-list', {
         templateUrl: '/modules/dashboard/views/guest-list.html',
-        controller: 'dashboard.GuestListCtrl',
+        controller: 'dashboard.GuestListController',
         controllerAs: 'guestListCtrl',
         resolve: ['$ocLazyLoad', function($ocLazyLoad) {
           return $ocLazyLoad.load([

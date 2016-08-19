@@ -8,12 +8,16 @@ describe('dashboard.Welcome', function() {
       welcomeService = $injector.get('dashboard.Welcome');
     }));
 
-    it('should include name in welcome message when it is supplied', function() {
-      expect(welcomeService.getMessage('GUEST NAME')).toEqual('Welcome home GUEST NAME!');
+    describe('when name is supplied', function() {
+      it('should include name in welcome message', function() {
+        expect(welcomeService.getMessage('GUEST NAME')).toEqual('Welcome home GUEST NAME!');
+      });
     });
 
-    it('should return welcome message without a name when it is not supplied', function() {
-      expect(welcomeService.getMessage(null)).toEqual('Welcome home !');
+    describe('when name is not supplied', function() {
+      it('should return welcome message without a name', function() {
+        expect(welcomeService.getMessage(null)).toEqual('Welcome home !');
+      });
     });
   });
 });

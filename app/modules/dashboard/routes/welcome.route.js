@@ -11,7 +11,7 @@
     $routeProvider
       .when('/', {
         templateUrl: '/modules/dashboard/views/welcome.html',
-        controller: 'dashboard.WelcomeCtrl',
+        controller: 'dashboard.WelcomeController',
         controllerAs: 'welcomeCtrl',
         resolve: ['$ocLazyLoad', function($ocLazyLoad) {
           return $ocLazyLoad.load([

@@ -1,13 +1,13 @@
 describe('accessControl.User', function() {
+  var userService;
+
   beforeEach(module('accessControl'));
 
+  beforeEach(inject(function($injector) {
+    userService = $injector.get('accessControl.User');
+  }));
+
   describe('save()', function() {
-    var userService;
-
-    beforeEach(inject(function($injector) {
-      userService = $injector.get('accessControl.User');
-    }));
-
     it('should save user in local storage', function() {
       var user = { name: 'New user name' };
       userService.save(user);
@@ -16,12 +16,6 @@ describe('accessControl.User', function() {
   });
 
   describe('current()', function() {
-    var userService;
-
-    beforeEach(inject(function($injector) {
-      userService = $injector.get('accessControl.User');
-    }));
-
     it('should return user saved in local storage', function() {
       var user = { name: 'New user name' };
       localStorage.setItem('user', JSON.stringify(user));

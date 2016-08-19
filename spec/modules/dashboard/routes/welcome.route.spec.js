@@ -10,7 +10,7 @@ describe('welcome.route', function() {
   describe('/', function() {
     it("should map to welcome page", function() {
       expect($route.routes['/'].templateUrl).toEqual('/modules/dashboard/views/welcome.html');
-      expect($route.routes['/'].controller).toEqual('dashboard.WelcomeCtrl');
+      expect($route.routes['/'].controller).toEqual('dashboard.WelcomeController');
       expect($route.routes['/'].controllerAs).toEqual('welcomeCtrl');
     });
   });

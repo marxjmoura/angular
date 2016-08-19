@@ -1,12 +1,12 @@
 (function() {
 
-  angular.module('dashboard').controller('dashboard.GuestListCtrl', [
+  angular.module('dashboard').controller('dashboard.GuestListController', [
     '$location',
     'accessControl.User',
-    GuestListCtrl
+    GuestListController
   ]);
 
-  function GuestListCtrl ($location, user)  {
+  function GuestListController ($location, user)  {
     var _self = this;
 
     _self.owner = user.current();

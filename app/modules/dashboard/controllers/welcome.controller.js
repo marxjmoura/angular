@@ -1,12 +1,12 @@
 (function() {
 
-  angular.module('dashboard').controller('dashboard.WelcomeCtrl', [
+  angular.module('dashboard').controller('dashboard.WelcomeController', [
     '$location',
     'accessControl.User',
-    WelcomeCtrl
+    WelcomeController
   ]);
 
-  function WelcomeCtrl ($location, user)  {
+  function WelcomeController ($location, user)  {
     var _self = this;
 
     function goToGueslist() {
