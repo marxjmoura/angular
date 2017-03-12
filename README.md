@@ -1,3 +1,5 @@
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/marxjmoura/angular/blob/master/LICENSE)
+
 # AngularJS Application
 Modular AngularJS app design with lazy loading.
 
